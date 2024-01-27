@@ -74,7 +74,7 @@ type: 'circle',
 source: 'campgrounds',
 filter: ['!', ['has', 'point_count']],
 paint: {
-'circle-color': '#11b4da',
+'circle-color': '#de6c2a',
 'circle-radius': 4,
 'circle-stroke-width': 1,
 'circle-stroke-color': '#fff'
