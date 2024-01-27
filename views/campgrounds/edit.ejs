@@ -23,8 +23,8 @@
                     <textarea class="form-control" name="description" id="description" required><%= campground.description %> "</textarea>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="location">Add Images</label>
-                    <input class="form-control" type="file" name="image" id="image" multiple required>
+                    <label class="form-label" for="image">Add Images</label>
+                    <input class="form-control" type="file" name="image" id="image" multiple>
                 </div>
                 <div class="mb-3">
                     <% campground.images.forEach((img, i) => { %>
@@ -32,7 +32,8 @@
                             <img src="<%= img.thumbnail %>" class="img-thumbnail" alt="">
                             <input type="checkbox" name="deleteImages[]" id="<%= i %>" value="<%= img.fileName %>">
                         </div>
-                    <% }); %> 
+                        <label for="image-<%=i%>">Delete?</label>
+                    <% }); %>
                 </div>
                 <div class="mg-3">
                     <button class="btn btn-success">Update Campground</button>                    
