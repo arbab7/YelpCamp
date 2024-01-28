@@ -1,0 +1,11 @@
+version: '3.2'
+
+services:
+
+  yelpcamp:
+    build:
+      context: ../
+      dockerfile: deployment/Dockerfile
+    image: yelpcamp
+    ports:
+      - ${PORT}:${PORT}
