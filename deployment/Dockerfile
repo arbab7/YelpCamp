@@ -13,7 +13,7 @@ WORKDIR /yelpcamp
 RUN npm config set strict-ssl false
 RUN npm install
 
-USER node
+USER nobody
 
 ENTRYPOINT [ "npm" ]
 CMD [ "start" ]
