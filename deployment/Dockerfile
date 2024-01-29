@@ -11,7 +11,9 @@ COPY . /yelpcamp
 WORKDIR /yelpcamp
 
 RUN npm config set strict-ssl false
-RUN npm install
+
+RUN rm -rf node_modules; \
+    npm install
 
 USER nobody
 
